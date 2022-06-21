@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const path = require('path');
 
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -13,9 +14,6 @@ require('dotenv').config()
 var pages = require('./pages');
 var authHelper = require('./authHelper');
 
-// Configure express
-// Set up rendering of static files
-app.use(express.static('./static'));
 // Need JSON body parser for most API responses
 app.use(bodyParser.json());
 // Set up cookies and sessions to save tokens
@@ -259,6 +257,11 @@ app.get('/deleteitem', function(req, res) {
     }
   });
 });
+
+app.use(express.static(path.join(__dirname,'../frontend/build')))
+app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'../frontend/build/index.html'))
+})
 // Start the server
 var server = app.listen(3000, function() {
   var host = server.address().address;
