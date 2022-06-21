@@ -34,7 +34,7 @@ function App() {
             newEvent.end = new Date('\''+element.End.DateTime.substr(0,10)+'\'')
             newEvent.title = element.Subject
             newEvent.allDay = element.IsAllDay
-            // console.log(newEvent)
+            console.log(newEvent)
             await setevent(newEvent)
         };  
     }
