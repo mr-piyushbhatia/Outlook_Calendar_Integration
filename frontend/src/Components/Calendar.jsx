@@ -37,6 +37,7 @@ function App() {
             console.log(newEvent)
             await setevent(newEvent)
         };  
+        abc()
     }
     const setevent = (newEvent)=>{
         return new Promise((resolve,reject)=>{
@@ -45,10 +46,7 @@ function App() {
         })
     }
     useEffect(() => {
-        setTimeout(() => {
-            
-            abc()
-        }, 1000);
+        abc()
     }, [])
     
 
