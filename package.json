@@ -1,5 +1,5 @@
 {
-  "name": "node-calendar-sync",
+  "name": "outlook_calendar_integration",
   "version": "1.0.0",
   "description": "Sample Node.js app that connects to Office 365 and syncs calendar data",
   "main": "BackEnd/app.js",
