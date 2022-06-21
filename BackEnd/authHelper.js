@@ -1,6 +1,6 @@
 var clientId = '13642b09-84ca-401a-8a9e-1d29e2d27ebb';
 var clientSecret = '_Wu8Q~palQeIh568iutBUFdam6NZ0cmJwLsS0bAm';
-var redirectUri = 'http://localhost:3000/authorize';
+var redirectUri = 'https://outlook-calender-shera.herokuapp.com/authorize';
 
 var scopes = [
   'openid',
