@@ -263,7 +263,7 @@ app.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'../frontend/build/index.html'))
 })
 // Start the server
-var server = app.listen(3000, function() {
+var server = app.listen(process.env.PORT, function() {
   var host = server.address().address;
   var port = server.address().port;
   
