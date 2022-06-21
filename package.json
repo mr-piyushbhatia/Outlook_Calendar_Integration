@@ -5,7 +5,9 @@
   "main": "BackEnd/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon BackEnd/app.js"
+    "dev": "node BackEnd/app.js",
+    "start": "nodemon BackEnd/app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
