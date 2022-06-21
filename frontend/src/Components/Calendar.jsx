@@ -45,7 +45,10 @@ function App() {
         })
     }
     useEffect(() => {
+        setTimeout(() => {
+            
             abc()
+        }, 1000);
     }, [])
     
 
